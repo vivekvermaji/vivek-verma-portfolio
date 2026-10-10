@@ -34,17 +34,17 @@
 @media(max-width:750px){.skill-grid .skill-focus,.skill-grid .skill-highlight{grid-column:auto;padding:24px;min-height:300px}.skill-grid .skill-focus h3,.skill-grid .skill-highlight h3{font-size:36px;max-width:100%;margin-top:28px}.skill-grid .skill-focus p{font-size:14px;max-width:245px}.skill-visual{width:150px;height:150px;right:12px;bottom:6px;opacity:.28}.skill-grid .skill-highlight{min-height:245px}}
 @media(prefers-reduced-motion:reduce){.skill-visual *{animation:none!important}.skill-focus .skill-visual{transition:none}.skill-focus:hover h3,.skill-focus:hover p{transform:none}}
 
-/* Rich themed streams for the newer featured cards, layered like the originals. */
-.skill-stream,.edit-stream{position:absolute;z-index:1;inset:-25%;pointer-events:none;font:800 30px 'DM Mono';word-spacing:26px;line-height:2.2;transform:rotate(-10deg);opacity:.55;transition:opacity .4s;animation:stream-drift 9s ease-in-out infinite}
+/* Themed streams: half-density, tilted, left-weighted like the originals. */
+.skill-stream,.edit-stream{position:absolute;z-index:1;top:0;bottom:0;left:0;width:62%;pointer-events:none;overflow:hidden;font:800 28px 'DM Mono';word-spacing:30px;line-height:2.9;transform:rotate(-10deg) translate(-12%,4%);opacity:.5;transition:opacity .4s;animation:stream-drift 9s ease-in-out infinite;background:linear-gradient(90deg,transparent,rgba(255,211,92,.1),transparent)}
 .skill-stream{color:#ffd266}
-.skill-focus:hover .skill-stream{opacity:.95}
-.edit-stream{color:#d51f29;font-size:22px;word-spacing:20px;line-height:1.9;transform:rotate(-11deg);animation-name:edit-drift;animation-duration:11s}
+.skill-focus:hover .skill-stream{opacity:.9}
+.edit-stream{color:#d51f29;font-size:20px;word-spacing:24px;line-height:2.8;transform:rotate(-11deg) translate(-12%,4%);animation-name:edit-drift;animation-duration:11s;background:linear-gradient(90deg,transparent,rgba(221,25,35,.1),transparent)}
 .skill-highlight span,.skill-highlight h3{position:relative;z-index:2}
-.skill-highlight:hover .edit-stream{opacity:.9}
+.skill-highlight:hover .edit-stream{opacity:.85}
 .editing:after{content:"\25B6";position:absolute;z-index:1;right:-6px;bottom:-58px;color:rgba(0,0,0,.14);font-size:160px;font-weight:900}
-@keyframes stream-drift{50%{transform:rotate(-10deg) translate(3%,-4%)}}
-@keyframes edit-drift{50%{transform:rotate(-11deg) translate(3%,-4%)}}
-@media(max-width:750px){.skill-stream{font-size:24px}.edit-stream{font-size:20px}.editing:after{font-size:120px;bottom:-44px}}
+@keyframes stream-drift{50%{transform:rotate(-10deg) translate(-9%,0)}}
+@keyframes edit-drift{50%{transform:rotate(-11deg) translate(-9%,0)}}
+@media(max-width:750px){.skill-stream{font-size:22px}.edit-stream{font-size:17px}.editing:after{font-size:120px;bottom:-44px}}
 @media(prefers-reduced-motion:reduce){.skill-stream,.edit-stream{animation:none!important}}
 
 /* Legible Quick File name, matching the hero lettering. */
